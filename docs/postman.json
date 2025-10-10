@@ -6,7 +6,7 @@
   },
   "item": [
     {
-      "name": "Mover carro",
+      "name": "Mover carro (POST)",
       "request": {
         "method": "POST",
         "header": [
@@ -17,7 +17,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"direccion\": \"adelante\",\n  \"velocidad\": 120,\n  \"duracion\": 3\n}"
+          "raw": "{\n  \"cmd\": \"F\",\n  \"speed\": 150,\n  \"duration\": 2\n}"
         },
         "url": {
           "raw": "http://<IP_DEL_ESP32>/move",
@@ -33,6 +33,29 @@
       "response": []
     },
     {
+      "name": "Mover carro (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://<IP_DEL_ESP32>/move?cmd=F&speed=150&duration=2",
+          "protocol": "http",
+          "host": [
+            "<IP_DEL_ESP32>"
+          ],
+          "path": [
+            "move"
+          ],
+          "query": [
+            { "key": "cmd", "value": "F" },
+            { "key": "speed", "value": "150" },
+            { "key": "duration", "value": "2" }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Verificar estado del servidor",
       "request": {
         "method": "GET",
@@ -41,7 +64,7 @@
           "raw": "http://<IP_DEL_ESP32>/status",
           "protocol": "http",
           "host": [
-            "<192.168.0.105>"
+            "<IP_DEL_ESP32>"
           ],
           "path": [
             "status"
