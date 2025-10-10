@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "Control Carro ESP32 HTTP + MQTT",
+    "description": "Colección Postman para probar los endpoints del servidor HTTP en el ESP32. Incluye ejemplos para controlar el carro y verificar el estado del servidor.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Mover carro",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"direccion\": \"adelante\",\n  \"velocidad\": 120,\n  \"duracion\": 3\n}"
+        },
+        "url": {
+          "raw": "http://<IP_DEL_ESP32>/move",
+          "protocol": "http",
+          "host": [
+            "<IP_DEL_ESP32>"
+          ],
+          "path": [
+            "move"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Verificar estado del servidor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://<IP_DEL_ESP32>/status",
+          "protocol": "http",
+          "host": [
+            "<192.168.0.105>"
+          ],
+          "path": [
+            "status"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
