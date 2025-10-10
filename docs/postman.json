@@ -20,10 +20,10 @@
           "raw": "{\n  \"cmd\": \"F\",\n  \"speed\": 150,\n  \"duration\": 2\n}"
         },
         "url": {
-          "raw": "http://192.168.1.120/move",
+          "raw": "http://192.168.0.105/move",
           "protocol": "http",
           "host": [
-            "192.168.1.120"
+            "192.168.0.105"
           ],
           "path": [
             "move"
@@ -38,10 +38,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://192.168.1.120/move?cmd=F&speed=150&duration=2",
+          "raw": "http://192.168.0.105/move?cmd=F&speed=150&duration=2",
           "protocol": "http",
           "host": [
-            "192.168.1.120"
+            "192.168.0.105"
           ],
           "path": [
             "move"
@@ -61,10 +61,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://192.168.1.120/status",
+          "raw": "http://192.168.0.105/status",
           "protocol": "http",
           "host": [
-            "192.168.1.120"
+            "192.168.0.105"
           ],
           "path": [
             "status"
