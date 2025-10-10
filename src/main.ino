@@ -6,11 +6,11 @@
 const char* WIFI_SSID = "iPhone 14 pro de Axel";
 const char* WIFI_PASS = "12345678";
 
-const char* MQTT_BROKER = "test.mosquitto.org"; // o la IP de tu broker
+const char* MQTT_BROKER = "test.mosquitto.org"; 
 const int   MQTT_PORT   = 1883;
 const char* MQTT_TOPIC  = "carro/instrucciones";
 
-// Pines L298N (ajusta si tus pines son distintos)
+// Pines L298N 
 #define IN1 25
 #define IN2 26
 #define IN3 27
@@ -58,7 +58,7 @@ ledcAttach(ENA, 5000, 8); // pin, frecuencia , resoluci n (8 bits = 0-255)      
 
   // Rutas HTTP
   server.on("/move", HTTP_GET, handleMove);    // acepta GET con query params: ?cmd=F&speed=150&duration=2
-  server.on("/move", HTTP_POST, handleMove);   // opcional: POST con body JSON/simple
+  server.on("/move", HTTP_POST, handleMove);   
   server.on("/status", HTTP_GET, handleStatus);
 
   server.begin();
